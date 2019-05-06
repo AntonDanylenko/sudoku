@@ -1,0 +1,29 @@
+{% extends "mainpage.html" %}
+{% block title %} Typing {% endblock %}
+{% block content %}
+
+<center>
+
+<div id="selectDifficulty">
+  <div id="exampleoverlay">
+    <div id="typingDisplay" style="width: 1000px; top: 15%">
+      <h4>Choose Difficulty</h4>
+      <ul class="menu">
+        <li><button class="success button" style="width: 120px;" onclick="selectDif('Easy')">Easy</button></li>
+        <li><button class="warning button" style="width: 120px;" onclick="selectDif('Medium')">Medium</button></li>
+        <li><button class="alert button" style="width: 120px;" onclick="selectDif('Difficult')">Difficult</button></li>
+      </ul>
+      <br>
+      <br>
+      <br>
+      <ul class="menu">
+        <li><a href="/leaderboard"><button class="hollow button" style="width: 120px;">Leaderboard</button></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!--<script src="./static/typing.js"></script>-->
+
+</center>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "template.html" %}
+{% block title %} Welcome {% endblock %}
+{% block body %}
+
+<div class="top-bar" style="position: relative; z-index: 2;">
+  <div class="row">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+	<li class="menu-text">GitGüd</li>
+    <li><a href="/main"><button class="btn">Activities</button></a></li>
+    <li><a href="/typing"><button class="btn">Typing</button></a></li>
+    <li><a href="/vocab"><button class="btn">Vocabulary</button></a></li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <!--<li>{{username}}</li>-->
+        <li><form action="/logout">
+          <button class="lg button button-rounded-hover">Logout</button>
+        </form></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<br>
+{% set msgs = get_flashed_messages() %}
+{% for msg in msgs %}
+<center>
+    <div class="callout success">
+        <p style="color:black">{{msg}}</p>
+    </div>
+</center>
+{% endfor %}
+{% block content %}{% endblock %}
+
+{% endblock %}
