@@ -19,7 +19,7 @@ function setupBoard(){
   for(var i=1; i<9; i++){
     console.log("i: ", i);
     if(i==3 || i==6){
-      ctx.lineWidth = 5;
+      ctx.lineWidth = 6;
     }
     else{
       ctx.lineWidth = 1;
